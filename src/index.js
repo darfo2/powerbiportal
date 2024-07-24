@@ -72,7 +72,7 @@ const router = createBrowserRouter(
 
 	],
 	{
-		basename: "/PowerBI", // This should match your repository name
+		basename: "/powerbiportal", // This should match your repository name
 	},
 );
 
