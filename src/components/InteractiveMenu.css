@@ -1,0 +1,82 @@
+.interactive-menu {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .menu-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #0072ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .menu-item {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #00a8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .menu-item:hover {
+    background: #0056b3;
+    /* Remove the transform property here */
+  }
+  
+  .menu-item .item-name {
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  
+  .item-0 { transform: translate(100px, -200px); }
+  .item-1 { transform: translate(200px, -100px); }
+  .item-2 { transform: translate(250px, 0); }
+  .item-3 { transform: translate(200px, 100px); }
+  .item-4 { transform: translate(100px, 200px); }
+  .item-5 { transform: translate(0, 250px); }
+  
+  @keyframes fanOut {
+    0% { 
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .interactive-menu .menu-item {
+    animation: fanOut 0.5s ease forwards;
+  }
+  
+  .interactive-menu .item-0 { animation-delay: 0.1s; }
+  .interactive-menu .item-1 { animation-delay: 0.2s; }
+  .interactive-menu .item-2 { animation-delay: 0.3s; }
+  .interactive-menu .item-3 { animation-delay: 0.4s; }
+  .interactive-menu .item-4 { animation-delay: 0.5s; }
+  .interactive-menu .item-5 { animation-delay: 0.6s; }
