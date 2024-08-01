@@ -8,6 +8,7 @@ import Footer from '../Footer'
 import Animal from '../../assets/animal.PNG'
 import Feeds from '../../assets/feeds.PNG'
 import F2C2 from '../../assets/f2c2.PNG'
+import rsbsa from '../../assets/rsbsa.png'
 
 const fadeIn = keyframes`
   from { opacity: 0; }
@@ -162,6 +163,13 @@ function Page() {
         imageSrc: Feeds,
         powerBIUrl:
           "https://app.powerbi.com/view?r=eyJrIjoiOGU0MTlkYzMtOGM4NC00ZTQ5LWIxMjUtYzYyMjFlMjEyYjc3IiwidCI6IjY4OTgwNjFkLTFhNmItNGUzOS1hZGZjLWRjOGFmZTA3MjIwMSIsImMiOjEwfQ%3D%3D",
+      },
+      {
+        title: "DA-RSBSA (Registry System for Basic Sectors in Agriculture) Demographic",
+        text: "Prepared by RSBSA NPMO",
+        imageSrc: rsbsa,
+        powerBIUrl:
+          "https://app.powerbi.com/singleSignOn?ctid=25363027-5264-4a52-82dc-83acbe30cc8b&experience=power-bi&fbclid=IwY2xjawEX2qJleHRuA2FlbQIxMAABHQCa35t7jkr6r2qfMgdrsBaE6_pufbsM_wWB8JVw0pKLIoVSB0W3rrJ4qA_aem_8WrSq_kL8KlBhPgAFhICgg&ru=https%3A%2F%2Fapp.powerbi.com%2Fgroups%2Fme%2Fapps%2Fe7536ff0-3773-4efb-970f-32651c96ec28%2Freports%2Fcce9bd2c-46ac-48d5-91c2-d2ffcac6cdb9%2FReportSection493e614530181d8dc02c%3Fctid%3D25363027-5264-4a52-82dc-83acbe30cc8b%26experience%3Dpower-bi%26fbclid%3DIwY2xjawEX2qJleHRuA2FlbQIxMAABHQCa35t7jkr6r2qfMgdrsBaE6_pufbsM_wWB8JVw0pKLIoVSB0W3rrJ4qA_aem_8WrSq_kL8KlBhPgAFhICgg%26noSignUpCheck%3D1",
       },
   ]);
 
