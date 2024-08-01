@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import Lottie from "react-lottie";
 import styled, { keyframes } from "styled-components";
 import { Link } from 'react-router-dom';
 import { FaChartLine, FaDollarSign, FaClipboardCheck, FaAddressBook, FaFlask, FaChartBar, FaCalculator, FaCreditCard, FaHome } from 'react-icons/fa';
 import { IoMdMenu } from 'react-icons/io';
 import Footer from '../Footer'
-// import pmedAnimation from "../../animations/pmed2.json";
+import nvat from '../../assets/nvat.PNG'
 import "../../styles/page.css";
 
 const fadeIn = keyframes`
@@ -141,20 +140,13 @@ const Hero = () => {
 function Page() {
   const [isOpen, setIsOpen] = useState(false);
   const [cards] = useState([
-    // {
-    //   title: "",
-    //   text: "",
-    //   animationOptions: {
-    //     loop: true,
-    //     autoplay: true,
-    //     animationData: pmedAnimation,
-    //     rendererSettings: {
-    //       preserveAspectRatio: "xMidYMid slice",
-    //     },
-    //   },
-    //   powerBIUrl:
-    //     "",
-    // },
+    {
+      title: "Inflow and Outflow of Assorted Vegetables in Nueva Vizcaya Agricultural Terminal (NVAT), Bambang, Nueva Vizcaya",
+      text: "Prepared by Agribusiness and Marketing Assistance Division",
+      imageSrc: nvat,
+      powerBIUrl:
+        "https://app.powerbi.com/view?r=eyJrIjoiMmI2NWJkM2QtZmY2MS00YTU1LTkzNjMtMTE4MmViNzBlYjUxIiwidCI6IjY4OTgwNjFkLTFhNmItNGUzOS1hZGZjLWRjOGFmZTA3MjIwMSIsImMiOjEwfQ%3D%3D&fbclid=IwY2xjawEYezlleHRuA2FlbQIxMAABHUq8nM8JHCjmof6HhnRn1eND3s84-IRn93e5xCbMdKMutaLp89jdN8fwCg_aem_GaLi1MQW6aQP04tRnKW4RQ",
+    },
   ]);
 
   const handleViewAnalytics = (url) => {
@@ -177,19 +169,17 @@ function Page() {
               <CardWrapper key={i}>
                 <div className="card">
                   <h3>{card.title}</h3>
-                  <div className="lottie-container">
-                    {card.animationOptions && (
-                      <Lottie
-                        options={card.animationOptions}
-                        height="100%"
-                        width="100%"
-                        style={{
-                          maxWidth: "225px",
-                          maxHeight: "225px",
-                          margin: "0 auto",
-                        }}
-                      />
-                    )}
+                  <div className="image-container">
+                    <img 
+                      src={card.imageSrc} 
+                      alt={card.title}
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                        display: "block",
+                        margin: "0 auto",
+                      }}
+                    />
                   </div>
                   <p>{card.text}</p>
                   {card.powerBIUrl && (
@@ -205,7 +195,7 @@ function Page() {
             ))}
           </CardContainer>
         </div>
-        < Footer/>
+        <Footer />
       </MainContent>
     </PageWrapper>
   );
