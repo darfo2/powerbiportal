@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/powerbiportal/static/css/main.9e05c19f.css",
-    "main.js": "/powerbiportal/static/js/main.9fb878f9.js",
+    "main.js": "/powerbiportal/static/js/main.ccbd0552.js",
     "static/media/finalvideo.mp4": "/powerbiportal/static/media/finalvideo.af2a7f07d655890593dc.mp4",
     "static/media/r4d.PNG": "/powerbiportal/static/media/r4d.ea6b9380dd0007d3ca69.PNG",
     "static/media/animal.PNG": "/powerbiportal/static/media/animal.b67b3a2f39854502e837.PNG",
@@ -10,6 +10,7 @@
     "static/media/ild.PNG": "/powerbiportal/static/media/ild.bbfa0f0ab32a3fc623c8.PNG",
     "static/media/pmed1.PNG": "/powerbiportal/static/media/pmed1.37b3117caad480bc3e13.PNG",
     "static/media/DA_Logo.png": "/powerbiportal/static/media/DA_Logo.75ed1bba5192b1df370d.png",
+    "static/media/rsbsa.png": "/powerbiportal/static/media/rsbsa.1dbcddd208ff3e050a96.png",
     "static/media/farmers.PNG": "/powerbiportal/static/media/farmers.77d53c756758cfb21039.PNG",
     "static/media/3.PNG": "/powerbiportal/static/media/3.aade7d5a4ac9a09fb30a.PNG",
     "static/media/rad1.PNG": "/powerbiportal/static/media/rad1.3fab73012dff29b98ac0.PNG",
@@ -19,10 +20,10 @@
     "static/media/rad4.PNG": "/powerbiportal/static/media/rad4.a486bac07367b92ecd4c.PNG",
     "index.html": "/powerbiportal/index.html",
     "main.9e05c19f.css.map": "/powerbiportal/static/css/main.9e05c19f.css.map",
-    "main.9fb878f9.js.map": "/powerbiportal/static/js/main.9fb878f9.js.map"
+    "main.ccbd0552.js.map": "/powerbiportal/static/js/main.ccbd0552.js.map"
   },
   "entrypoints": [
     "static/css/main.9e05c19f.css",
-    "static/js/main.9fb878f9.js"
+    "static/js/main.ccbd0552.js"
   ]
 }
