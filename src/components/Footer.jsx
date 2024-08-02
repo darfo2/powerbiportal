@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => (
-  <footer className="footer">
+	<footer className="footer" style={{ flexShrink: 0 }}>
     <div className="footer-content">
       <div className="footer-section">
         <h2 className="text-2xl font-bold">DA-DOS AYOS!</h2>

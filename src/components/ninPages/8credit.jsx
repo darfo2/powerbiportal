@@ -21,11 +21,14 @@ const slideUp = keyframes`
 const PageWrapper = styled.div`
   display: flex;
   min-height: 100vh;
+  flex-direction: column;
   animation: ${fadeIn} 0.5s ease-out;
 `;
 
 const MainContent = styled.main`
-  flex: 1;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
   background-color: #f8f9fa;
   transition: margin-left 0.3s ease-in-out;
   margin-left: ${props => props.isShifted ? '250px' : '0'};
@@ -141,20 +144,6 @@ const Hero = () => {
 function Page() {
   const [isOpen, setIsOpen] = useState(false);
   const [cards] = useState([
-    // {
-    //   title: "",
-    //   text: "",
-    //   animationOptions: {
-    //     loop: true,
-    //     autoplay: true,
-    //     animationData: pmedAnimation,
-    //     rendererSettings: {
-    //       preserveAspectRatio: "xMidYMid slice",
-    //     },
-    //   },
-    //   powerBIUrl:
-    //     "",
-    // },
   ]);
 
   const handleViewAnalytics = (url) => {
@@ -170,6 +159,7 @@ function Page() {
       </button>
       <Sidebar isOpen={isOpen} />
       <MainContent isShifted={isOpen}>
+      <div style={{ flex: '1 0 auto' }}>
         <Hero />
         <div className="container">
           <CardContainer>
@@ -205,7 +195,8 @@ function Page() {
             ))}
           </CardContainer>
         </div>
-        <Footer />
+        </div>
+          <Footer />
       </MainContent>
     </PageWrapper>
   );
