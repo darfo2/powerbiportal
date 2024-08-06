@@ -9,6 +9,7 @@ import rad1 from '../../assets/rad1.PNG'
 import rad2 from '../../assets/rad2.PNG'
 import rad3 from '../../assets/rad3.PNG'
 import rad4 from '../../assets/rad4.PNG'
+import scrc from '../../assets/scrc.png'
 
 const fadeIn = keyframes`
   from { opacity: 0; }
@@ -44,7 +45,7 @@ const MainContent = styled.main`
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   animation: ${fadeIn} 0.5s ease-out;
   padding: 20px;
 
@@ -56,7 +57,7 @@ const CardContainer = styled.div`
 const CardWrapper = styled.div`
   flex: 0 0 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
-  margin-bottom: 20px;
+  margin: 10px; /* Adjusted to ensure even spacing */
   animation: ${slideUp} 0.5s ease-out;
 
   @media (max-width: 969px) {
@@ -174,7 +175,14 @@ function Page() {
         imageSrc: rad4,
         powerBIUrl:
           "https://app.powerbi.com/reportEmbed?reportId=0cc71a2d-0648-4623-a3a2-b527020b57cf&autoAuth=true&ctid=6898061d-1a6b-4e39-adfc-dc8afe072201",
-      }
+      },
+      {
+        title: "Goat Breeder Loan Program Status for CY 2014-2023",
+        text: "Prepared by Southern Cagayan Research Center",
+        imageSrc: scrc,
+        powerBIUrl:
+          "https://app.powerbi.com/reportEmbed?reportId=af20b7c5-b997-4116-8eee-9009d0157a73&autoAuth=true&ctid=6898061d-1a6b-4e39-adfc-dc8afe072201",
+      },
   ]);
 
   const handleViewAnalytics = (url) => {
