@@ -174,7 +174,7 @@ function Page() {
         text: "Prepared by Finance and Administrative Division",
         imageSrc: rad4,
         powerBIUrl:
-          "https://app.powerbi.com/reportEmbed?reportId=0cc71a2d-0648-4623-a3a2-b527020b57cf&autoAuth=true&ctid=6898061d-1a6b-4e39-adfc-dc8afe072201",
+          "https://login.microsoftonline.com/6898061d-1a6b-4e39-adfc-dc8afe072201/oauth2/v2.0/authorize?client_id=871c010f-5e61-4fb1-83ac-98610a7e9110&scope=https%3A%2F%2Fanalysis.windows.net%2Fpowerbi%2Fapi%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fapp.powerbi.com%2Fsignin&client-request-id=0f92c4fd-d7d5-4456-93d1-f9aacd97269a&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.39.0&client_info=1&code_challenge=H89pAXzMXhrfSAMSOBK-QILu7aygYBvgHpZ2yQOLUzM&code_challenge_method=S256&nonce=e16a1e5d-3596-40e7-9a6a-b98ac20964dc&state=eyJpZCI6ImEyMGI3NzEwLWFjNjYtNGE0ZC1iYWZhLWU4MzI3MWQwOGYwMSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D%7C1727916587128.7%3B1727916587128.9%3B1727916586588.5&site_id=500453&nux=1",
       },
       {
         title: "Goat Breeder Loan Program Status for CY 2014-2023",
