@@ -5,6 +5,7 @@ import { FaChartLine, FaDollarSign, FaClipboardCheck, FaAddressBook, FaFlask, Fa
 import { IoMdMenu } from 'react-icons/io';
 import "../../styles/page.css";
 import ild from '../../assets/ild.PNG'
+import gap from '../../assets/GAP.PNG'
 import Footer from '../Footer'
 
 const fadeIn = keyframes`
@@ -37,10 +38,11 @@ const MainContent = styled.main`
   }
 `;
 
+
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   animation: ${fadeIn} 0.5s ease-out;
   padding: 20px;
 
@@ -52,7 +54,7 @@ const CardContainer = styled.div`
 const CardWrapper = styled.div`
   flex: 0 0 calc(33.33% - 20px);
   max-width: calc(33.33% - 20px);
-  margin-bottom: 20px;
+  margin: 10px; /* Adjusted to ensure even spacing */
   animation: ${slideUp} 0.5s ease-out;
 
   @media (max-width: 969px) {
@@ -149,6 +151,13 @@ function Page() {
       imageSrc: ild,
       powerBIUrl:
         "https://app.powerbi.com/view?r=eyJrIjoiYzA1MmVhNjQtYTJjOS00NmM3LTkxZjYtMDFkYWE5MDk4YjM0IiwidCI6IjY4OTgwNjFkLTFhNmItNGUzOS1hZGZjLWRjOGFmZTA3MjIwMSIsImMiOjEwfQ%3D%3D",
+    },
+    {
+      title: "Philippines GAP Certified Farms in Region 02",
+      text: "Prepared by Regulatory Division",
+      imageSrc: gap,
+      powerBIUrl:
+        "https://app.powerbi.com/view?r=eyJrIjoiODFmMTVmYzUtY2QyZS00ZGUxLTgwNDMtOTEwNjliMGJlNTU1IiwidCI6IjY4OTgwNjFkLTFhNmItNGUzOS1hZGZjLWRjOGFmZTA3MjIwMSIsImMiOjEwfQ%3D%3D",
     },
   ]);
 
