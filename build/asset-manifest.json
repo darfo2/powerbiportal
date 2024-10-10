@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/powerbiportal/static/css/main.9e05c19f.css",
-    "main.js": "/powerbiportal/static/js/main.5f23df3f.js",
+    "main.js": "/powerbiportal/static/js/main.a1baebc0.js",
     "static/media/finalvideo.mp4": "/powerbiportal/static/media/finalvideo.af2a7f07d655890593dc.mp4",
     "static/media/r4d.PNG": "/powerbiportal/static/media/r4d.ea6b9380dd0007d3ca69.PNG",
     "static/media/animal.PNG": "/powerbiportal/static/media/animal.b67b3a2f39854502e837.PNG",
     "static/media/scrc.png": "/powerbiportal/static/media/scrc.baa3eb1de03ef1dda99a.png",
+    "static/media/GAP.PNG": "/powerbiportal/static/media/GAP.e850fec71e0afd73d206.PNG",
     "static/media/feeds.PNG": "/powerbiportal/static/media/feeds.3e16bd2d902a55967728.PNG",
     "static/media/Bagong Pilipinas Logo.png": "/powerbiportal/static/media/Bagong Pilipinas Logo.e9f7bf23dfc09b193ffc.png",
     "static/media/ild.PNG": "/powerbiportal/static/media/ild.bbfa0f0ab32a3fc623c8.PNG",
@@ -22,10 +23,10 @@
     "static/media/rad4.PNG": "/powerbiportal/static/media/rad4.a486bac07367b92ecd4c.PNG",
     "index.html": "/powerbiportal/index.html",
     "main.9e05c19f.css.map": "/powerbiportal/static/css/main.9e05c19f.css.map",
-    "main.5f23df3f.js.map": "/powerbiportal/static/js/main.5f23df3f.js.map"
+    "main.a1baebc0.js.map": "/powerbiportal/static/js/main.a1baebc0.js.map"
   },
   "entrypoints": [
     "static/css/main.9e05c19f.css",
-    "static/js/main.5f23df3f.js"
+    "static/js/main.a1baebc0.js"
   ]
 }
