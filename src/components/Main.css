@@ -1,86 +1,211 @@
 .main {
-    position: relative;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.tataks {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tatak {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Sidebar Toggle Button - Make it more visible */
+.sidebar button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1002;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sidebar Container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: white;
+  width: 250px;
+  transform: translateX(-250px);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* When sidebar is open */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Sidebar Navigation */
+.sidebar nav {
+  padding: 70px 20px 20px; /* Increased top padding to avoid overlap with button */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar a span {
+  font-size: 14px;
+}
+
+/* Icon styles */
+.sidebar a svg {
+  font-size: 20px;
+  min-width: 20px;
+}
+
+/* Make sure the toggle button is visible on top of the video */
+button[style*="toggleBtn"] {
+  background: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+  z-index: 1002 !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    max-width: 250px;
   }
   
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  .sidebar button {
+    top: 10px;
+    left: 10px;
   }
-  
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 1;
-  }
-  
-  .tataks {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .tatak {
-    width: 100px;
-    height: auto;
-    margin: 0 10px;
+    width: 150px;
+    height: 150px;
   }
-  
+
   h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
   }
-  
+
   p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
-  
-  .powerbi-container {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    transition: all 0.5s ease;
-    z-index: 10;
+
+  h2 {
+    font-size: 1.5rem;
   }
-  
-  .powerbi-container.menu-open {
-    top: 50%;
-    left: 100px; /* Adjust this value to move it more left or right as needed */
-    bottom: auto;
-    transform: translateY(-50%);
+
+  .content {
+    padding: 15px;
   }
-  
-  .cta-button {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #0072ff;
-    color: white;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .tatak {
+    width: 120px;
+    height: 120px;
   }
-  
-  .cta-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+  h1 {
+    font-size: 1.5rem;
   }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .tataks {
+    gap: 10px;
+  }
+}

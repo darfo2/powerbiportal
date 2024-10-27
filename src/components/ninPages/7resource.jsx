@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from 'react-router-dom';
 import { FaChartLine, FaDollarSign, FaClipboardCheck, FaAddressBook, FaFlask, FaChartBar, FaCalculator, FaCreditCard, FaHome } from 'react-icons/fa';
-import { IoMdMenu } from 'react-icons/io';
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
 import "../../styles/page.css";
 import Footer from '../Footer'
 import rad1 from '../../assets/rad1.PNG'
@@ -15,6 +15,23 @@ const fadeIn = keyframes`
   from { opacity: 0; }
   to { opacity: 1; }
 `;
+
+const MenuToggleButton = styled.button`
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1002;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 
 const slideUp = keyframes`
   from { transform: translateY(20px); opacity: 0; }
@@ -193,15 +210,15 @@ function Page() {
 
   return (
     <PageWrapper>
-      <button className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
-        <IoMdMenu />
-      </button>
+      <MenuToggleButton onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
+      </MenuToggleButton>
       <Sidebar isOpen={isOpen} />
       <MainContent isShifted={isOpen}>
-      <div style={{ flex: '1 0 auto' }}>
-        <Hero />
-        <div className="container">
-          <CardContainer>
+        <div style={{ flex: '1 0 auto' }}>
+          <Hero />
+          <div className="container">
+            <CardContainer>
             {cards.map((card, i) => (
               <CardWrapper key={i}>
                 <div className="card">

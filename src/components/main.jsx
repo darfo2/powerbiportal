@@ -1,26 +1,27 @@
 import React from 'react'
-import { useRef, useEffect, useState } from 'react'   
+import { useRef, useEffect, useState } from 'react'
 import videoBG from '../assets/finalvideo.mp4'
 import daLogo from "../assets/DA_Logo.png"
 import bpLogo from '../assets/Bagong Pilipinas Logo.png'
 import { Link } from 'react-router-dom'
 import { FaChartLine, FaDollarSign, FaClipboardCheck, FaAddressBook, FaFlask, FaChartBar, FaCalculator, FaCreditCard, FaHome } from 'react-icons/fa';
-import { IoMdMenu } from 'react-icons/io';
+import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import '../components/Main.css'
 
-const sidebarStyles = { 
-  toggleBtn: {
-    position: 'fixed',
-    top: '10px',
-    left: '10px',
-    background: 'linear-gradient(135deg, #f0f4ff 0%, #f5f9ff 100%)',
-    border: 'none',
-    fontSize: '24px',
-    cursor: 'pointer',
-    zIndex: 1001,
-    padding: '5px',
-    borderRadius: '5px',
-  },
-};
+// const sidebarStyles = {
+//   toggleBtn: {
+//     position: 'fixed',
+//     top: '10px',
+//     left: '10px',
+//     background: 'linear-gradient(135deg, #f0f4ff 0%, #f5f9ff 100%)',
+//     border: 'none',
+//     fontSize: '24px',
+//     cursor: 'pointer',
+//     zIndex: 1001,
+//     padding: '5px',
+//     borderRadius: '5px',
+//   },
+// };
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,23 +43,41 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button style={sidebarStyles.toggleBtn} onClick={toggleSidebar}>
-        <IoMdMenu />
+    <>
+      <button 
+        className="menu-toggle-btn"
+        onClick={toggleSidebar}
+        style={{
+          position: 'fixed',
+          top: '20px',
+          left: '20px',
+          background: 'white',
+          border: 'none',
+          padding: '10px',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          zIndex: 1002,
+          boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+        }}
+      >
+        {isOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
       </button>
-      <nav>
-        <ul>
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <Link to={item.link}>
-                {item.icon}
-                <span>{item.title}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+      
+      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <nav>
+          <ul>
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <Link to={item.link}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 };
 
@@ -87,7 +106,7 @@ const Main = () => {
   return (
     <div className='main'>
       <Sidebar />
-      <video ref={videoRef} src={videoBG} autoPlay loop muted />
+      <video ref={videoRef} src={videoBG} autoPlay loop muted className='background-video' />
       <div className='dark-overlay'></div>
       <div className='content'>
         <div className='tataks'>
