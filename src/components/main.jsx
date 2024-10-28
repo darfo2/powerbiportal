@@ -1,34 +1,14 @@
-import React from 'react'
-import { useRef, useEffect, useState } from 'react'
-import videoBG from '../assets/finalvideo.mp4'
-import daLogo from "../assets/DA_Logo.png"
-import bpLogo from '../assets/Bagong Pilipinas Logo.png'
-import { Link } from 'react-router-dom'
+import React, { useRef, useEffect, useState, useCallback } from 'react';
+import videoBG from '../assets/finalvideo.mp4';
+import daLogo from "../assets/DA_Logo.png";
+import bpLogo from '../assets/Bagong Pilipinas Logo.png';
+import { Link } from 'react-router-dom';
 import { FaChartLine, FaDollarSign, FaClipboardCheck, FaAddressBook, FaFlask, FaChartBar, FaCalculator, FaCreditCard, FaHome } from 'react-icons/fa';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
-import '../components/Main.css'
-
-// const sidebarStyles = {
-//   toggleBtn: {
-//     position: 'fixed',
-//     top: '10px',
-//     left: '10px',
-//     background: 'linear-gradient(135deg, #f0f4ff 0%, #f5f9ff 100%)',
-//     border: 'none',
-//     fontSize: '24px',
-//     cursor: 'pointer',
-//     zIndex: 1001,
-//     padding: '5px',
-//     borderRadius: '5px',
-//   },
-// };
+import '../components/Main.css';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
 
   const menuItems = [
     { title: 'Home', icon: <FaHome />, link: '/' },
@@ -42,33 +22,56 @@ const Sidebar = () => {
     { title: 'Credit Facilities & Programs', icon: <FaCreditCard />, link: '/Credit' },
   ];
 
+  // Toggle sidebar and body scroll
+  const toggleSidebar = useCallback(() => {
+    setIsOpen(prevState => !prevState);
+    document.body.classList.toggle('sidebar-open');
+  }, []);
+
+  // Close sidebar on route change
+  const handleNavigation = () => {
+    setIsOpen(false);
+    document.body.classList.remove('sidebar-open');
+  };
+
+  // Close sidebar on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        toggleSidebar();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isOpen, toggleSidebar]);
+
   return (
     <>
       <button 
         className="menu-toggle-btn"
         onClick={toggleSidebar}
-        style={{
-          position: 'fixed',
-          top: '20px',
-          left: '20px',
-          background: 'white',
-          border: 'none',
-          padding: '10px',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          zIndex: 1002,
-          boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
-        }}
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
         {isOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
       </button>
+
+      {/* Overlay */}
+      <div 
+        className={`sidebar-overlay ${isOpen ? 'show' : ''}`}
+        onClick={toggleSidebar}
+        role="presentation"
+      />
       
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <nav>
           <ul>
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Link to={item.link}>
+                <Link 
+                  to={item.link}
+                  onClick={handleNavigation}
+                >
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>
