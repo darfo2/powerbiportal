@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/powerbiportal/static/css/main.0d6437c4.css",
-    "main.js": "/powerbiportal/static/js/main.d9256c1d.js",
+    "main.css": "/powerbiportal/static/css/main.ede1f9e2.css",
+    "main.js": "/powerbiportal/static/js/main.4e1db3d0.js",
     "static/media/finalvideo.mp4": "/powerbiportal/static/media/finalvideo.af2a7f07d655890593dc.mp4",
     "static/media/r4d.PNG": "/powerbiportal/static/media/r4d.ea6b9380dd0007d3ca69.PNG",
     "static/media/animal.PNG": "/powerbiportal/static/media/animal.b67b3a2f39854502e837.PNG",
@@ -22,11 +22,11 @@
     "static/media/rad2.PNG": "/powerbiportal/static/media/rad2.6a328de60fddd18c9512.PNG",
     "static/media/rad4.PNG": "/powerbiportal/static/media/rad4.a486bac07367b92ecd4c.PNG",
     "index.html": "/powerbiportal/index.html",
-    "main.0d6437c4.css.map": "/powerbiportal/static/css/main.0d6437c4.css.map",
-    "main.d9256c1d.js.map": "/powerbiportal/static/js/main.d9256c1d.js.map"
+    "main.ede1f9e2.css.map": "/powerbiportal/static/css/main.ede1f9e2.css.map",
+    "main.4e1db3d0.js.map": "/powerbiportal/static/js/main.4e1db3d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d6437c4.css",
-    "static/js/main.d9256c1d.js"
+    "static/css/main.ede1f9e2.css",
+    "static/js/main.4e1db3d0.js"
   ]
 }
