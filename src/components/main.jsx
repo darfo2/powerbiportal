@@ -1,3 +1,4 @@
+// Main.jsx
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import videoBG from '../assets/finalvideo.mp4';
 import daLogo from "../assets/DA_Logo.png";
@@ -22,19 +23,16 @@ const Sidebar = () => {
     { title: 'Credit Facilities & Programs', icon: <FaCreditCard />, link: '/Credit' },
   ];
 
-  // Toggle sidebar and body scroll
   const toggleSidebar = useCallback(() => {
     setIsOpen(prevState => !prevState);
     document.body.classList.toggle('sidebar-open');
   }, []);
 
-  // Close sidebar on route change
   const handleNavigation = () => {
     setIsOpen(false);
     document.body.classList.remove('sidebar-open');
   };
 
-  // Close sidebar on escape key
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape' && isOpen) {
@@ -56,7 +54,6 @@ const Sidebar = () => {
         {isOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
       </button>
 
-      {/* Overlay */}
       <div 
         className={`sidebar-overlay ${isOpen ? 'show' : ''}`}
         onClick={toggleSidebar}
