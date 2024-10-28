@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/powerbiportal/static/css/main.1f7eebf2.css",
+    "main.css": "/powerbiportal/static/css/main.781061b4.css",
     "main.js": "/powerbiportal/static/js/main.d9256c1d.js",
     "static/media/finalvideo.mp4": "/powerbiportal/static/media/finalvideo.af2a7f07d655890593dc.mp4",
     "static/media/r4d.PNG": "/powerbiportal/static/media/r4d.ea6b9380dd0007d3ca69.PNG",
@@ -22,11 +22,11 @@
     "static/media/rad2.PNG": "/powerbiportal/static/media/rad2.6a328de60fddd18c9512.PNG",
     "static/media/rad4.PNG": "/powerbiportal/static/media/rad4.a486bac07367b92ecd4c.PNG",
     "index.html": "/powerbiportal/index.html",
-    "main.1f7eebf2.css.map": "/powerbiportal/static/css/main.1f7eebf2.css.map",
+    "main.781061b4.css.map": "/powerbiportal/static/css/main.781061b4.css.map",
     "main.d9256c1d.js.map": "/powerbiportal/static/js/main.d9256c1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f7eebf2.css",
+    "static/css/main.781061b4.css",
     "static/js/main.d9256c1d.js"
   ]
 }
